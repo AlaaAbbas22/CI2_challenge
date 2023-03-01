@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as pltimg
 import cv2
 
-#loading the dataset
+#loading the dataset (there was a problem with that link so I downloaded the data and used it locally)
 data = np.load("https://zenodo.org/record/6496656/files/chestmnist.npz")
 
 #creating a dictionary of the image with each set in a key:value pair
