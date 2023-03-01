@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import matplotlib.image as pltimg
 import cv2
 
-#loading the dataset (there was a problem with that link so I downloaded the data and used it locally)
-data = np.load("https://zenodo.org/record/6496656/files/chestmnist.npz")
+#loading the dataset
+data = np.load("E:\Internships\Apps\CI2\Coding challenge\d.npz")
 
 #creating a dictionary of the image with each set in a key:value pair
 data = dict(data)
@@ -17,6 +17,7 @@ image = data["train_images"][100]
 #converting a 1-channel image (1 value per pixel) to 3-channel one to analyze and apply filters
 #https://stackoverflow.com/questions/14786179/how-to-convert-a-1-channel-image-into-a-3-channel-with-opencv2
 img = cv2.merge((image, image, image))
+k=img
 
 #visualizing the image as gray scale because each pixel has three identical values
 plt.imshow(img)
@@ -44,6 +45,10 @@ plt.show()
 
 #plt.imsave("Alaa_Abbas_2.png", inverted_img)
 
+
+
+
+
 #function for making the image into red with some green. I think, for analysis, a blue one would be better, but I wanted to show my understanding
 def red_green(img):
     tmp_img = img
@@ -59,4 +64,5 @@ colored = red_green(img)
 plt.imshow(colored)
 plt.show()
 
-#plt.imsave("Alaa_Abbas_3.png", bluedimg)
+#plt.imsave("Alaa_Abbas_3.png", colored)
+
